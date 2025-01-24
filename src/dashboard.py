@@ -6,18 +6,19 @@ from .modules.generate_graphs import plot_call_distribution, plot_call_ratio
 
 load_dotenv()
 
+
 class Dashboard:
     def __init__(self):
-        self.dashboard()
+        pass
 
-    def dashboard(self):
+    def run(self):
         st.set_page_config(page_title="Customer Support Dashboard", layout="wide")
         st.title("📈 Customer Support Dashboard")
-        
+
         st.header("⤳ Call Trends Over Time")
         data = pd.read_csv("./src/data/call_center_data.csv")
         data["Answer Rate"] = data["Answer Rate"].str.rstrip("%").astype(float) / 100
-        
+
         incoming_avg = data["Incoming Calls"].mean()
         answered_avg = data["Answered Calls"].mean()
         ans_rate_avg = data["Answer Rate"].mean()
@@ -38,7 +39,7 @@ class Dashboard:
         self.ai_report(data)
 
     def ai_report(self, data):
-        st.header("🤖 AI Insights")        
+        st.header("🤖 AI Insights")
         response = generate_insights(data)
         report_message = response.text
         st.markdown(report_message)
