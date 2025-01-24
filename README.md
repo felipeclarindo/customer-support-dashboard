@@ -1,59 +1,70 @@
+🌍 [Leia em Português](README.pt-BR.md)
+
 # Customer Support Dashboard
 
-Aplicação interativa desenvolvida em Streamlit para analisar e visualizar o desempenho de um centro de atendimento ao cliente. Este dashboard permite que os usuários monitorem métricas chave, como chamadas recebidas, chamadas atendidas e taxas de atendimento, além de gerar insights automatizados por meio de inteligência artificial.
+Interactive application developed in Streamlit to analyze and visualize the performance of a customer service center. This dashboard allows users to monitor key metrics such as incoming calls, answered calls, and call rates, as well as generate automated insights through artificial intelligence.
 
-## Funcionalidades
+## Functionalities
 
-- **Visualização de Métricas**: Exibe métricas como chamadas recebidas, chamadas atendidas e taxas de atendimento de forma clara e concisa.
-- **Gráficos Interativos**: Apresenta gráficos de linha e barras para visualizar tendências ao longo do tempo e a distribuição de chamadas.
-- **Relatório AI**: Gera um relatório de insights baseado em dados históricos, fornecendo recomendações para melhorar o desempenho do atendimento.
+- **Metrics View**: Displays metrics such as incoming calls, answered calls, and call rates clearly and concisely.
+- **Interactive Graphics**: Displays line charts and bars to view trends over time and call distribution.
+- **AI Report**: Generates an insights report based on historical data, providing recommendations to improve service performance.
 
-## Técnologias Utilizadas
+## Technologies Used
 
-- [Streamlit](https://streamlit.io) - Para construção da aplicação web.
-- [Pandas](https://pandas.pydata.org) - Para manipulação e análise de dados.
-- [dotenv](https://pypi.org/project/python-dotenv/) - Para gerenciamento de variáveis de ambiente.
-- [Gemini](https://ai.google.dev/gemini-api/docs) - Para geração de insights utilizando inteligência artificial.
+- [Streamlit](https://streamlit.io) - For building the web application.
+- [Pandas](https://pandas.pydata.org) - For data manipulation and analysis.
+- [dotenv](https://pypi.org/project/python-dotenv/) - For environment variable management.
+- [Gemini API](https://ai.google.dev/gemini-api/docs) - For generating insights using artificial intelligence.
 
-## Como usar
+## Steps for installing and run
 
-1. Clone o repositório para o seu computador:
+1. Clone the repository:
 
 ```bash
    git clone https://github.com/felipeclarindo/customer-support-dashboard.git
 ```
 
-2. Entre no diretorio:
+2. Enter directory:
 
 ```bash
     cd customer-support-dashboard
 ```
 
-3. Instale as dependencias:
+3. Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+4. Run the `.bat` file in `.venv/Scripts/activate.bat`.
+
+5. Install the dependencies:
 
 ```bash
     pip install -r requirements.txt
 ```
 
-4. Crie um arquivo `.env` na raiz do projeto e adicione sua chave da API do OpenAI:
+6. Create an `.env` file at the root of the project based on the [.env example](file./.env.example) and add your OpenAI API key:
 
 ```bash
-    GEMINI_API_KEY=chave_da_api
+    GEMINI_API_KEY=your_api_key
 ```
 
-5. Execute o programa:
+7. Run the dashboard:
 
 ```bash
     streamlit run ./main.py
 ```
 
-6. O dashboard será aberto no seu navegador padrão em http://localhost:8501.
+8. The dashboard is open in your default browser at:
+   - `http://localhost:8501`
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas! Se você tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-## Autor
+## Author
 
 **Felipe Clarindo**
 
@@ -61,6 +72,6 @@ Contribuições são bem-vindas! Se você tiver sugestões de melhorias, sinta-s
 - [Instagram](https://www.instagram.com/lipethecoder)
 - [GitHub](https://github.com/felipeclarindo)
 
-## Licença
+## License
 
-Este projeto está licenciado sob a [GNU Affero License](https://www.gnu.org/licenses/agpl-3.0.html).
+This project is licensed under the [GNU Affero License](https://www.gnu.org/licenses/agpl-3.0.html).
